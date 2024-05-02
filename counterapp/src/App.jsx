@@ -6,12 +6,16 @@ function App() {
 
   let [counter,setCounter] = useState(0);
   function increaseCount(){
-    setCounter(counter++);
-    console.log(counter);
+    if(counter<20){
+      setCounter(counter+1);
+    }
+    // console.log(counter);
   }
   function decreaseCount(){
-    setCounter(counter--);
-    console.log(counter);
+    if(counter>0){
+      setCounter(counter-1);
+    }
+    // console.log(counter);
   }
   return (
     <>
