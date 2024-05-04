@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import  InputBox  from "./components/InputBox"
 import useCurrency from "./hooks/useCurrency"
 
@@ -8,7 +8,7 @@ function App() {
   const [to, setTo]=useState("npr")
   const [convertedAmount, setConvertedAmount]=useState(0)
   
-  const currencyInfo=useCurrency(from)
+  const currencyInfo=useCurrency(from); // useCurrency("usd")
   
   const options = Object.keys(currencyInfo);
 
@@ -23,7 +23,7 @@ function App() {
     setConvertedAmount(amount*currencyInfo[to])
   }
 
-  
+
   return (
     <div
         className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
