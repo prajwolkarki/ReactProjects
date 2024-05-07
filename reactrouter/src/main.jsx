@@ -7,7 +7,8 @@ import About from './About.jsx'
 import Root from './routes/root.jsx'
 import ErrorPage from './routes/error-page'
 import './index.css'
-
+import Fetch from './Fetch.jsx'
+import Marks from './Marks.jsx'
 const router  = createBrowserRouter([
   { 
     path:'/',
@@ -21,6 +22,14 @@ const router  = createBrowserRouter([
   {
     path:'/about',
     element: <About/>
+  },
+  {
+    path:'/fetch',
+    element: <Fetch/>
+  },
+  {
+    path:'/memo',
+    element: <Marks/>
   }
 ])
 
